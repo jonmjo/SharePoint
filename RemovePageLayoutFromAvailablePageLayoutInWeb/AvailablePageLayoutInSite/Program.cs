@@ -13,14 +13,7 @@ namespace AvailablePageLayoutInSite
         {
             if (args.Length != 2)
             {
-                Console.WriteLine(
-                    string.Format(
-                        "Start program by: {0} {1} {2}", 
-                        System.AppDomain.CurrentDomain.FriendlyName,
-                        "http://localhost:51001",
-                        "PageLayoutFileName.aspx"
-                    )
-                );
+                PrintHelpText();
             }
             else
             {
@@ -29,6 +22,20 @@ namespace AvailablePageLayoutInSite
             
             Console.Write("\nPress any key to end the program...");
             Console.ReadKey(true);
+        }
+
+        private static void PrintHelpText()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(
+                string.Format(
+                    "Start program by: {0} {1} {2}",
+                    System.AppDomain.CurrentDomain.FriendlyName,
+                    "http://localhost:51001",
+                    "PageLayoutFileName.aspx"
+                )
+            );
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
 
         private static void StartProcess(string url, string pageLayoutToRemove)
@@ -60,7 +67,10 @@ namespace AvailablePageLayoutInSite
             }
             catch (Exception ex)
             {
-                Console.Write("An Error occured " + ex.Message);
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("\n\nAn Error occured " + ex.Message + "\n\nEnsure that you have Administrative rights.\n"); // Also ensure platform target is x64 and not x86.
+                Console.ForegroundColor = ConsoleColor.Gray;
+                PrintHelpText();
             }
         }
 
@@ -78,7 +88,7 @@ namespace AvailablePageLayoutInSite
 		        
 		
 		        var availablePageLayouts = pWeb.GetAvailablePageLayouts();
-		        Console.Write("\n " + availablePageLayouts.Length.ToString() + " Page Layouts assoiciated with web.");
+		        Console.Write("\n  " + availablePageLayouts.Length.ToString() + " Page Layouts assoiciated with web.");
 		        if (availablePageLayouts.Length > 0)
 		        {
 			        for(int i = 1; i < availablePageLayouts.Length; i++)
