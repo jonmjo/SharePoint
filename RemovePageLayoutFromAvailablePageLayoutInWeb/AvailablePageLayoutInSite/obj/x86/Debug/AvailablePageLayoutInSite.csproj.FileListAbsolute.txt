@@ -1,4 +1,0 @@
-U:\Chalmers\SharePoint\_Code\3.3\AvailablePageLayoutInSite\AvailablePageLayoutInSite\bin\Debug\AvailablePageLayoutInSite.exe
-U:\Chalmers\SharePoint\_Code\3.3\AvailablePageLayoutInSite\AvailablePageLayoutInSite\bin\Debug\AvailablePageLayoutInSite.pdb
-U:\Chalmers\SharePoint\_Code\3.3\AvailablePageLayoutInSite\AvailablePageLayoutInSite\obj\x86\Debug\AvailablePageLayoutInSite.exe
-U:\Chalmers\SharePoint\_Code\3.3\AvailablePageLayoutInSite\AvailablePageLayoutInSite\obj\x86\Debug\AvailablePageLayoutInSite.pdb

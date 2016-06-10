@@ -11,8 +11,29 @@ namespace AvailablePageLayoutInSite
     {
         static void Main(string[] args)
         {
-            string url = "http://localhost:51001";
-            string pageLayoutToRemove = "ChalmersJobOpeningsPage.aspx";
+            if (args.Length != 2)
+            {
+                Console.WriteLine(
+                    string.Format(
+                        "Start program by: {0} {1} {2}", 
+                        System.AppDomain.CurrentDomain.FriendlyName,
+                        "http://localhost:51001",
+                        "PageLayoutFileName.aspx"
+                    )
+                );
+            }
+            else
+            {
+                StartProcess(args[0], args[1]);
+            }
+            
+            Console.Write("\nPress any key to end the program...");
+            Console.ReadKey(true);
+        }
+
+        private static void StartProcess(string url, string pageLayoutToRemove)
+        {
+
             try
             {
                 Console.Write("\n Will search for PageLayout " + pageLayoutToRemove);
@@ -28,7 +49,7 @@ namespace AvailablePageLayoutInSite
 
                         for (int i = 0; i < webs.Count; i++)
                         {
-                            Console.Write("\n Doing " + (i+1) + " of " + webs.Count);
+                            Console.Write("\n Doing " + (i + 1) + " of " + webs.Count);
                             var moreSWC = removePageLayoutFromWeb(webs[i], pageLayoutToRemove);
 
                             foreach (SPWeb addWb in moreSWC) webs.Add(addWb);
@@ -41,8 +62,6 @@ namespace AvailablePageLayoutInSite
             {
                 Console.Write("An Error occured " + ex.Message);
             }
-            Console.Write("\nPress any key to end the program...");
-            Console.ReadKey(true);
         }
 
         public static SPWebCollection removePageLayoutFromWeb(SPWeb oWeb, string pageLayoutToRemove)
