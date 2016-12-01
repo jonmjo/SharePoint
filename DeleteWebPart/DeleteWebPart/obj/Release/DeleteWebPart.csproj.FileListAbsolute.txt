@@ -1,0 +1,4 @@
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\DeleteWebPart\DeleteWebPart\bin\Release\DeleteWebPart.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\DeleteWebPart\DeleteWebPart\bin\Release\DeleteWebPart.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\DeleteWebPart\DeleteWebPart\obj\Release\DeleteWebPart.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\DeleteWebPart\DeleteWebPart\obj\Release\DeleteWebPart.pdb
