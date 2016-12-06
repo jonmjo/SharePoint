@@ -12,7 +12,7 @@ namespace DeleteWebPart
             bool listOnly = false;
             Console.ForegroundColor = ConsoleColor.White;
 
-            if (args.Length == 2 && args[1].ToLower() == "/list") listOnly = true; ;
+            if (args.Length == 2 && args[1].ToLower() == "/list") listOnly = true;
 
             if (args.Length != 2)
             {

@@ -1,0 +1,3 @@
+Title;URL;Page responsible;Created;Modified
+Om institutionen;http://localhost:51001/sv/institutioner/arch/Om institutionen/Sidor/default.aspx;lotta.sarnbratt@chalmers.se;2015-05-05 09:09:07;2016-12-02 14:30:32
+Vision;http://localhost:51001/sv/institutioner/arch/Om institutionen/Sidor/Vision.aspx;lotta.sarnbratt@chalmers.se;2015-05-05 09:11:48;2015-05-05 09:23:00

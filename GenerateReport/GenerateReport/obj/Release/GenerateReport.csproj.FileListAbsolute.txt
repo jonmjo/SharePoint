@@ -1,0 +1,5 @@
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\GenerateReport\GenerateReport\bin\Release\GenerateReport.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\GenerateReport\GenerateReport\bin\Release\GenerateReport.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\GenerateReport\GenerateReport\obj\Release\GenerateReport.csprojResolveAssemblyReference.cache
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\GenerateReport\GenerateReport\obj\Release\GenerateReport.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\GenerateReport\GenerateReport\obj\Release\GenerateReport.pdb
