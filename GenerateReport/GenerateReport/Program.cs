@@ -14,8 +14,6 @@ namespace GenerateReport
         private static readonly char[] urlTrimChars = { '/' };
         private static readonly Regex webRelativeUrlRegex = new Regex("/[^/]+/[^/]+.aspx$", RegexOptions.Compiled & RegexOptions.IgnoreCase);
 
-
-
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.White;
