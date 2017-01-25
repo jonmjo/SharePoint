@@ -38,14 +38,17 @@ namespace DeleteWebPart
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("\nTo show all installed web parts.");
                 Console.ResetColor();
-                Console.WriteLine(string.Format("{0} {1}", System.AppDomain.CurrentDomain.FriendlyName, "/list" ) );
+                Console.WriteLine(string.Format("{0} {1} {2}", 
+                    System.AppDomain.CurrentDomain.FriendlyName,
+                    "http://localhost:51001", 
+                    "/list"));
                 
                 return;
             }
 
             string siteUrl = args[0];
             string webpartName = listOnly ? string.Empty : args[1].ToLower();
-            int webpartID = -1;
+            int webpartID = 0;
             int.TryParse(webpartName, out webpartID);
 
             using (SPSite parentSite = new SPSite(siteUrl))
@@ -63,7 +66,7 @@ namespace DeleteWebPart
                         continue;
                     }
 
-                    if (webpartID > -1)
+                    if (webpartID > 0)
                     {
                         if (item.ID == webpartID)
                         {
