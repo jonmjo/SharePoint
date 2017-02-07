@@ -6,6 +6,7 @@ using Chalmers.Core.Repositories;
 using System.IO;
 using Chalmers.Core;
 using System.Collections.Generic;
+using System.Text;
 
 namespace GenerateReport
 {
@@ -22,6 +23,14 @@ namespace GenerateReport
             {
                 Console.WriteLine("Generates reports.");
                 Console.ResetColor();
+                Console.WriteLine(
+                    string.Format(
+                        "Usage: {0} {1} {2}",
+                        System.AppDomain.CurrentDomain.FriendlyName,
+                        "http://localhost:51001",
+                        "/sv"
+                    )
+                );
                 Console.WriteLine(
                     string.Format(
                         "Usage: {0} {1} {2}",
@@ -132,6 +141,21 @@ namespace GenerateReport
             }
         }
 
+        public static string getStackTraceFromError(Exception ex)
+        {
+            StringBuilder strings = new StringBuilder();
+            while (ex != null)
+            {
+                strings.Append(ex.Message);
+                ex = ex.InnerException;
+
+                if (ex != null) strings.Append(";#");
+
+            }
+
+            return strings.ToString();
+        }
+
         private static SPWebCollection GetPageReport(Func<PageEntity, string, bool> rowFilter, Uri siteUri, ContactPersonRepository contactRepository, CsvFileWriter writer, SPWeb web)
         {
             SingleWebPagesRepository pagesRepository = new SingleWebPagesRepository() { Web = web };
@@ -140,29 +164,37 @@ namespace GenerateReport
             int sida = 0;
             foreach (PageEntity page in pages.OrderBy(x => x.Title))
             {
-                ClearCurrentConsoleLine();
-                Console.Write(string.Format(" Processing page {0}/{1}: {2}", ++sida, pages.Count(), page.FileRef));
-                string pageRelativeUrl = page.FileRef;
-                int indexSemicHash = pageRelativeUrl.IndexOf(";#");
+                try
+                {
+                    ClearCurrentConsoleLine();
+                    Console.Write(string.Format(" Processing page {0}/{1}: {2}", ++sida, pages.Count(), page.FileRef));
+                    string pageRelativeUrl = page.FileRef;
+                    int indexSemicHash = pageRelativeUrl.IndexOf(";#");
 
-                if (indexSemicHash >= 0 && pageRelativeUrl.Length > 2) 
-                    pageRelativeUrl = pageRelativeUrl.Substring(indexSemicHash + 2);
+                    if (indexSemicHash >= 0 && pageRelativeUrl.Length > 2)
+                        pageRelativeUrl = pageRelativeUrl.Substring(indexSemicHash + 2);
 
-                pageRelativeUrl = string.Format("/{0}", pageRelativeUrl.TrimStart(urlTrimChars));
+                    pageRelativeUrl = string.Format("/{0}", pageRelativeUrl.TrimStart(urlTrimChars));
 
-                string webRelativeUrl = webRelativeUrlRegex.Replace(pageRelativeUrl, string.Empty);
-                string contact = contactRepository.GetContactAddressForPage(pageRelativeUrl, webRelativeUrl, web.Site);
+                    string webRelativeUrl = webRelativeUrlRegex.Replace(pageRelativeUrl, string.Empty);
+                    string contact = contactRepository.GetContactAddressForPage(pageRelativeUrl, webRelativeUrl, web.Site);
 
-                if (!rowFilter(page, contact)) continue;
+                    if (!rowFilter(page, contact)) continue;
 
-                Uri pageUri = new Uri(siteUri, pageRelativeUrl);
-                CsvRow row = new CsvRow();
-                row.Add(page.Title);
-                row.Add(pageUri.ToString());
-                row.Add(contact);
-                row.Add(page.Created);
-                row.Add(page.Modified);
-                writer.WriteRow(row);
+                    Uri pageUri = new Uri(siteUri, pageRelativeUrl);
+                    CsvRow row = new CsvRow();
+                    row.Add(page.Title);
+                    row.Add(pageUri.ToString());
+                    row.Add(contact);
+                    row.Add(page.Created);
+                    row.Add(page.Modified);
+                    writer.WriteRow(row);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Could not process page. Continuing with next page.");
+                    Console.WriteLine(getStackTraceFromError(ex));
+                }
             }
             Console.WriteLine("\n");
             return web.Webs;
