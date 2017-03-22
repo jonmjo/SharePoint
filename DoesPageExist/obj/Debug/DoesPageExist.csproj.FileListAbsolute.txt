@@ -1,0 +1,5 @@
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\DoesPageExist\bin\Debug\DoesPageExist.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\DoesPageExist\bin\Debug\DoesPageExist.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\DoesPageExist\obj\Debug\DoesPageExist.csprojResolveAssemblyReference.cache
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\DoesPageExist\obj\Debug\DoesPageExist.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\DoesPageExist\obj\Debug\DoesPageExist.pdb
