@@ -1,0 +1,4 @@
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\MapFieldToTaxonomy\MapFieldToTaxonomy\bin\Release\MapFieldToTaxonomy.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\MapFieldToTaxonomy\MapFieldToTaxonomy\bin\Release\MapFieldToTaxonomy.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\MapFieldToTaxonomy\MapFieldToTaxonomy\obj\Release\MapFieldToTaxonomy.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\MapFieldToTaxonomy\MapFieldToTaxonomy\obj\Release\MapFieldToTaxonomy.pdb

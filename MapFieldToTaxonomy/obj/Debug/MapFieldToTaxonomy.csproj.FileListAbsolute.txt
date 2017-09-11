@@ -1,0 +1,9 @@
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\MapFieldToTaxonomy\MapFieldToTaxonomy\bin\Debug\MapFieldToTaxonomy.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\MapFieldToTaxonomy\MapFieldToTaxonomy\bin\Debug\MapFieldToTaxonomy.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\MapFieldToTaxonomy\MapFieldToTaxonomy\obj\Debug\MapFieldToTaxonomy.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\MapFieldToTaxonomy\MapFieldToTaxonomy\obj\Debug\MapFieldToTaxonomy.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\MapFieldToTaxonomy\obj\Debug\MapFieldToTaxonomy.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\MapFieldToTaxonomy\obj\Debug\MapFieldToTaxonomy.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\MapFieldToTaxonomy\bin\Debug\MapFieldToTaxonomy.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\MapFieldToTaxonomy\bin\Debug\MapFieldToTaxonomy.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\MapFieldToTaxonomy\obj\Debug\MapFieldToTaxonomy.csprojResolveAssemblyReference.cache
