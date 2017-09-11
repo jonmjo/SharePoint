@@ -18,7 +18,7 @@ namespace CVIP
                         "http://localhost:51001",
                         "/sv/projekt",
                         "ShowProjectTab",
-                        "true"
+                        "true/1/\"string\""
                     )
                 );
                 return;
@@ -30,11 +30,16 @@ namespace CVIP
             string value = args[3];
             int type=0;
 
-            bool parsedBool;
+            bool parsedBool = false;
             int parsedInt = 0;
 
-            if (bool.TryParse(value, out parsedBool)) type = 1;
-            else if (int.TryParse(value, out parsedInt)) type = 2;
+            if (value.StartsWith("\"") && value.EndsWith("\""))
+            {
+                type = 3; // String
+                value = value.Trim('"');
+            }
+            else if (bool.TryParse(value, out parsedBool)) type = 1;      // Bool
+            else if (int.TryParse(value, out parsedInt)) type = 2;        // int
             else throw new Exception("Only designed to take arguments in the form of integers and booleans.");
             
             Console.WriteLine("Starting...");
@@ -73,6 +78,15 @@ namespace CVIP
                                 if ((int)item[fieldName] != parsedInt)
                                 {
                                     item[fieldName] = parsedInt;
+                                    item.SystemUpdate(false);
+                                }
+
+                            }
+                            else if (type == 3)
+                            {
+                                if (item[fieldName] == null || item[fieldName].Equals(value) == false)
+                                {
+                                    item[fieldName] = value;
                                     item.SystemUpdate(false);
                                 }
 
