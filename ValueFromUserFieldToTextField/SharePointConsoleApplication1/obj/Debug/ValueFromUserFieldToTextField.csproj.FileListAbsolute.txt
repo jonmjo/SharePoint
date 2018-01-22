@@ -1,0 +1,5 @@
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\ValueFromUserFieldToTextField\SharePointConsoleApplication1\obj\Debug\ValueFromUserFieldToTextField.csprojResolveAssemblyReference.cache
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\ValueFromUserFieldToTextField\SharePointConsoleApplication1\bin\Debug\CopyValue.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\ValueFromUserFieldToTextField\SharePointConsoleApplication1\bin\Debug\CopyValue.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\ValueFromUserFieldToTextField\SharePointConsoleApplication1\obj\Debug\CopyValue.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\ValueFromUserFieldToTextField\SharePointConsoleApplication1\obj\Debug\CopyValue.pdb

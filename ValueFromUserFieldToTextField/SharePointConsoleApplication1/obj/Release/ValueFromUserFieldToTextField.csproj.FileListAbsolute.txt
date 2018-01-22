@@ -1,0 +1,4 @@
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\ValueFromUserFieldToTextField\SharePointConsoleApplication1\bin\Release\CopyValue.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\ValueFromUserFieldToTextField\SharePointConsoleApplication1\bin\Release\CopyValue.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\ValueFromUserFieldToTextField\SharePointConsoleApplication1\obj\Release\CopyValue.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\ValueFromUserFieldToTextField\SharePointConsoleApplication1\obj\Release\CopyValue.pdb
