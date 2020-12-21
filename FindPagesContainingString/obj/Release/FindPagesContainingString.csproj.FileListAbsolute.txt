@@ -1,0 +1,4 @@
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\FindPagesContainingString\bin\Release\FindPagesContaingingString.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\FindPagesContainingString\bin\Release\FindPagesContaingingString.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\FindPagesContainingString\obj\Release\FindPagesContaingingString.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\FindPagesContainingString\obj\Release\FindPagesContaingingString.pdb

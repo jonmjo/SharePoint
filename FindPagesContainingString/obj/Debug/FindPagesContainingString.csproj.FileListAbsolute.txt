@@ -1,0 +1,5 @@
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\FindPagesContainingString\bin\Debug\FindPagesContaingingString.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\FindPagesContainingString\bin\Debug\FindPagesContaingingString.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\FindPagesContainingString\obj\Debug\FindPagesContainingString.csprojResolveAssemblyReference.cache
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\FindPagesContainingString\obj\Debug\FindPagesContaingingString.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\FindPagesContainingString\obj\Debug\FindPagesContaingingString.pdb

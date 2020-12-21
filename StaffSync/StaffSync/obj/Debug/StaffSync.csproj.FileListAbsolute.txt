@@ -1,0 +1,5 @@
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\StaffSync\StaffSync\obj\Debug\StaffSync.csprojResolveAssemblyReference.cache
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\StaffSync\StaffSync\bin\Debug\StaffSync.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\StaffSync\StaffSync\bin\Debug\StaffSync.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\StaffSync\StaffSync\obj\Debug\StaffSync.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\StaffSync\StaffSync\obj\Debug\StaffSync.pdb
