@@ -1,0 +1,4 @@
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\GetSharepointLists\GetSharepointLists\bin\Debug\GetSharepointLists.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\GetSharepointLists\GetSharepointLists\bin\Debug\GetSharepointLists.pdb
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\GetSharepointLists\GetSharepointLists\obj\Debug\GetSharepointLists.exe
+C:\Users\ix3mjjo\Documents\GitHub\SharePoint\GetSharepointLists\GetSharepointLists\obj\Debug\GetSharepointLists.pdb

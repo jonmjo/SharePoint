@@ -20,6 +20,7 @@ namespace FindPagesContaingingString
                 Console.WriteLine("Parameter 1=URL. Exmpelvis http://localhost:51001/");
                 Console.WriteLine("Parameter 2=Sträng att hitta. Exmpelvis chalmersinnovation.com");
                 Console.WriteLine("Parameter 3=Skriv utdata till filnamn");
+                //Console.WriteLine("Parameter 4=Om sökning ska ske bland publicerade sidor");
                 Console.WriteLine("FindPagesContainingString.exe http://localhost:51001/ chalmersinnovation.com c:\\temp\\utfil.txt");
                 return;
             }
@@ -63,6 +64,7 @@ namespace FindPagesContaingingString
 
                 foreach (SPListItem li in list.Items)
                 {
+                    //li.HasPublishedVersion
                     for (int j = 0; j < li.Fields.Count - 1; j++)
                     {
                         try
