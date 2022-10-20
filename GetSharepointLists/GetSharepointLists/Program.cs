@@ -77,15 +77,21 @@ namespace GetSharepointLists
 
                 itm.ItemType = "List";
                 itm.BaseType = list.BaseType.ToString();
-                itm.Title = list.Title;
                 itm.Created = list.Created.ToShortDateString();
-                itm.Editor = list.Author.LoginName;
+                try { itm.Editor = list.Author.LoginName; } catch(Exception ex){itm.Editor ="NA";}
                 itm.LastEntry = list.LastItemModifiedDate.ToShortDateString();
                 itm.ListTypeID = list.TemplateFeatureId.ToString();
                 itm.itemCount = list.ItemCount.ToString();
-
-                itm.Url = oWeb.Site.Url + list.DefaultViewUrl;
-
+                try
+                {
+                    itm.Title = list.Title;
+                    itm.Url = oWeb.Site.Url + list.DefaultViewUrl;
+                }
+                catch (Exception ex) 
+                {
+                    itm.Title = "NA";
+                    itm.Url = oWeb.Url;
+                }
                 AddFormList(list, csvFileItems);
             }
             return oWeb.Webs.ToList();
@@ -93,22 +99,26 @@ namespace GetSharepointLists
 
         private static void AddFormList(SPList list, List<ListDataRow> csvFileItems)
         {
-            foreach (SPForm form in list.Forms)
+            try
             {
-                var itm = new ListDataRow();
-                csvFileItems.Add(itm);
+                foreach (SPForm form in list.Forms)
+                {
+                    var itm = new ListDataRow();
+                    csvFileItems.Add(itm);
 
-                itm.ItemType = "Form";
-                itm.BaseType = form.Type.ToString();
-                itm.Title = form.ParentList.Title;
-                itm.Created = form.ParentList.Created.ToShortDateString();
-                itm.Editor = form.ParentList.Author.LoginName;
-                itm.LastEntry = form.ParentList.LastItemModifiedDate.ToShortDateString();
-                itm.ListTypeID = form.TemplateName;
-                itm.itemCount = form.ParentList.ItemCount.ToString();
+                    itm.ItemType = "Form";
+                    itm.BaseType = form.Type.ToString();
+                    itm.Title = form.ParentList.Title;
+                    itm.Created = form.ParentList.Created.ToShortDateString();
+                    itm.Editor = form.ParentList.Author.LoginName;
+                    itm.LastEntry = form.ParentList.LastItemModifiedDate.ToShortDateString();
+                    itm.ListTypeID = form.TemplateName;
+                    itm.itemCount = form.ParentList.ItemCount.ToString();
 
-                itm.Url = form.ParentList.ParentWeb.Site.Url + form.ServerRelativeUrl;
+                    itm.Url = form.ParentList.ParentWeb.Site.Url + form.ServerRelativeUrl;
+                }
             }
+            catch (Exception ex) { }
         }
     }
 }
